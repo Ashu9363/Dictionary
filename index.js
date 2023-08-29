@@ -7,15 +7,15 @@ const port = process.env.PORT || 3000;
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
+app.get('/Dictionary/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
   });
   
-  app.get('/about', (req, res) => {
+  app.get('/Dictionary/about', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'about.html'));
   });
 
-  app.get('/apps', (req, res) => {
+  app.get('/Dictionary/apps', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'apps.html'));
   });
 
